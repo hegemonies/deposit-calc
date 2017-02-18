@@ -21,7 +21,7 @@ int main()
 	} while(check_input(sum_inset, time) == 1);
 	
 	if(check_input(sum_inset, time) == 0)
-			printf("ВСЕ ОК\n");
+		printf("ВСЕ ОК\n");
 	
 	return 0;
 }
