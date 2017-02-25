@@ -2,7 +2,7 @@
 
 int check_input(int sum, int time)
 {
-	if((sum > 10000) && ((time <= 365) && (time >= 0)))	
+	if((sum > 10000) && ((time <= 365) && (time >= 0)))
 		return 0;
 	return 1;
 }
@@ -28,7 +28,7 @@ float calculation(int sum, int time)
 		if(sum < 100001)
 			tmp = sum * 1.12;
 		else
-			tmp = sum * 1.15;	
+			tmp = sum * 1.15;
 	}
 	return tmp;
 }
