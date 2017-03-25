@@ -4,6 +4,7 @@
 int main()
 {
 	int sum_inset, time;
+
 	do{
 		printf("Введите сумму вклада (не менее 10 000 рублей): ");
 		scanf("%d", &sum_inset);
