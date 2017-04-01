@@ -20,7 +20,7 @@ build/test/validation_test.o: test/validation_test.c
 	gcc -Wall -Werror -I src/ -I thirdparty/ -c test/validation_test.c -o build/test/validation_test.o
 
 build/test/main.o: test/main.c build/test/deposit_test.o build/test/validation_test.o
-	gcc -Wall -Werror -I/thirdparty/ctest.c -c test/main.c -o build/test/main.o
+	gcc -Wall -Werror -I thirdparty/ -c test/main.c -o build/test/main.o
 
 .PHONY : clean
 
