@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "deposit.h"
 #define min_arg_inset 10000
 
 int check_input(int sum, int time)
