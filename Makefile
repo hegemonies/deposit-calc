@@ -11,10 +11,10 @@ build/main.o: src/main.c src/deposit.h
 
 
 deposit_test: build/deposit.o build/test/deposit_test.o build/test/main.o build/test/validation_test.o
-	gcc -Wall -Werror -I/src/deposit.h -I/thirdparty/ctest.h -c build/test/main.o build/test/validation_test.o build/test/deposit_test.o -o bin/deposit_test
+	gcc -Wall -Werror -I src/ -I thirdparty/ -c build/test/main.o build/test/validation_test.o build/test/deposit_test.o -o bin/deposit_test
 
 build/test/deposit_test.o: test/deposit_test.c
-	gcc -Wall -Werror -I src/ thirdparty/ -c test/deposit_test.c -o build/test/deposit_test.o
+	gcc -Wall -Werror -I src/ -I thirdparty/ -c test/deposit_test.c -o build/test/deposit_test.o
 
 build/test/validation_test.o: test/validation_test.c
 	gcc -Wall -Werror -I src/ -I thirdparty/ -c test/validation_test.c -o build/test/validation_test.o
