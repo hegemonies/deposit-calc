@@ -15,7 +15,7 @@ int main()
 			printf("ERROR\n");
 	} while(check_input(sum_inset, time) == 1);
 	
-	float calc = calculation(sum_inset, time);
+	double calc = calculation(sum_inset, time);
 	int income_inset = income(sum_inset, calc);
 	printf("Годовой доход при сроке в %d дней и сумме %d рублей составит: %0.2f\n", time, sum_inset, calc);
 	printf("Доходность вклада составляет: %d\n", income_inset);
