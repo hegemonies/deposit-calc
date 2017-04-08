@@ -1,6 +1,6 @@
-all: deposit-calc deposit-test
+all: bin/deposit-calc bin/deposit-calc-test
 
-deposit-calc: build/src/main.o build/src/deposit.o
+bin/deposit-calc: build/src/main.o build/src/deposit.o
 	gcc -Wall -Werror build/src/main.o build/src/deposit.o -o bin/deposit-calc
 
 build/src/deposit.o: src/deposit.c
@@ -9,7 +9,7 @@ build/src/deposit.o: src/deposit.c
 build/src/main.o: src/main.c src/deposit.h
 	gcc -Wall -Werror -c src/main.c -o build/src/main.o
 
-deposit-test: build/src/deposit.o build/test/deposit_test.o build/test/main.o build/test/validation_test.o
+bin/deposit-calc-test: build/src/deposit.o build/test/deposit_test.o build/test/main.o build/test/validation_test.o
 	gcc -Wall -Werror build/src/deposit.o build/test/deposit_test.o build/test/main.o build/test/validation_test.o -o bin/deposit-calc-test
 
 build/test/deposit_test.o: test/deposit_test.c
