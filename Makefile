@@ -9,8 +9,9 @@ build/src/deposit.o: src/deposit.c
 build/src/main.o: src/main.c src/deposit.h
 	gcc -Wall -Werror -c src/main.c -o build/src/main.o
 
-bin/deposit-calc-test: build/src/deposit.o build/test/deposit_test.o build/test/main.o build/test/validation_test.o
+test: build/src/deposit.o build/test/deposit_test.o build/test/main.o build/test/validation_test.o
 	gcc -Wall -Werror build/src/deposit.o build/test/deposit_test.o build/test/main.o build/test/validation_test.o -o bin/deposit-calc-test
+	bin/deposit-calc-test
 
 build/test/deposit_test.o: test/deposit_test.c
 	gcc -Wall -Werror -I src -I thirdparty -c test/deposit_test.c -o build/test/deposit_test.o
